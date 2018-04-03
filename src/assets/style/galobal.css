@@ -5,11 +5,11 @@ html,body{
     height: 100%
 }
 body{
-    background-image: url('../style/image/saito.png');
+    /* background-image: url('../style/image/saito.png');
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     font:14px 'microsoft yahei';
-    color: #4d4d4d;
-    font-weight:300
-
+    color:#333333;
+    font-weight:500;
+    
 }

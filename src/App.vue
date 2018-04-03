@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <div id="cover"></div>
+    <div id="cover">
+      <img alt="" class="bg_img" src="../src/assets/style/image/saito.png">
+    </div>
     <Header></Header>
     <Footer></Footer>
+    <todo></todo>
     <img src="./assets/logo.png">
     <router-view/>
     <!-- <div>
@@ -48,6 +51,7 @@ import componentA from './components/component.vue'
 
 import Header from './todo/header.vue'
 import Footer from './todo/foot.vue'
+import Todo from './todo/todo.vue'
 console.log(Stroe)
 export default {
   
@@ -77,7 +81,7 @@ export default {
   },
   //  components: { componentA },
   components:{
-    Header,Footer
+    Header,Footer,Todo
   },
   watch:{
     // items:{
@@ -127,5 +131,16 @@ export default {
   top:0;
   right: 0;
   bottom: 0;
+  background-color: #999;
+  opacity: .8;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.bg_img{
+  max-width:100%;
+   height:100%;
+   background-size: cover;
+   z-index: -1;
 }
 </style>

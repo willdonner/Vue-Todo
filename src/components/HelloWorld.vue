@@ -2,7 +2,7 @@
   <div id="app-2">
   <span v-bind:title="message">
     鼠标悬停此处几秒，
-    可以看到此处动态绑定的 title！
+    可以看到此处动态绑定的1 title！
   </span>
   
 </div>
