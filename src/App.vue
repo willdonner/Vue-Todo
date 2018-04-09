@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="cover">
-      <img alt="" class="bg_img" src="../src/assets/style/image/saito.png">
+      <!-- <img alt="" class="bg_img" src="../src/assets/style/image/0.0.jpg"> -->
     </div>
     <Header></Header>
     <Footer></Footer>

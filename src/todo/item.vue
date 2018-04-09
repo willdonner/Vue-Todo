@@ -17,12 +17,14 @@ export default {
       }
   },
   methods:{
-       deleteTodo(){
-           
+       deleteTodo(){          
        }
   }
 }
 </script>
+
+
+
 <style>
 .todo-item{
         position:relative;
@@ -31,10 +33,9 @@ export default {
         border-bottom:1px solid rgba(0,0,0,0.06)
 }
 .destroy:after{
-                content: '×'
-                
+                content: '×'    
             }       
-.label{
+ .todo-item label{
             white-space: pre-line;
             word-break: break-all;
             padding: 15px 60px 15px 15px;
@@ -42,12 +43,15 @@ export default {
             display: block;
             line-height: 1.2;
             transition: color 0.4s;
+           
         }
-.todo-item.completed.label{
-                background-color: dodgerblue
+        
+.todo-item.completed label{
+                
+                text-decoration:line-through;
             }
         
-    
+   
 .toggle{
         text-align: center;
         width: 40px;
@@ -63,12 +67,12 @@ export default {
         padding-left:5px;
         cursor:pointer;
     }
-        .toggle:after{
-            content: url('https://github.com/itPoet/Vue-Webpack-TodoAPP/blob/master/src/assets/images/round.svg')
+.toggle:after{
+            content: url('../assets/style/image/round.svg')
         }
-        .toggle:checked:after{
-            content: url('https://github.com/itPoet/Vue-Webpack-TodoAPP/blob/master/src/assets/images/done.svg')
-        }
+.toggle:checked:after{
+            content: url('../assets/style/image/done.svg')
+        }  
     
     .destroy{
         position: absolute;
@@ -80,12 +84,12 @@ export default {
         margin: auto 0;
         font-size: 30px;
         color: #cc9a9a;
-        margin-bottom: 11px;
+        margin-bottom: 0px;
         transition: color 0.2s ease-out;
         background-color:transparent;
         appearance:none;
         border-width:0;
         cursor:pointer;
         outline:none;
-    }
+    } 
 </style>
