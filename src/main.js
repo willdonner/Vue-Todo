@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import './assets/style/galobal.css'
+import './assets/style/galobal.styl'
 // import './assets/style/test.css'
 // import './assets/style/image/saito.png'
 Vue.config.productionTip = false

@@ -1,146 +1,48 @@
 <template>
-  <div id="app">
-    <div id="cover">
-      <!-- <img alt="" class="bg_img" src="../src/assets/style/image/0.0.jpg"> -->
+    <!-- app.vue 的template标签内只能有一个节点 -->
+    <div id="app">
+        <div id="cover"></div>
+        <APP_Header></APP_Header>
+        <APP_Todo></APP_Todo>
+        <APP_Footer></APP_Footer>
     </div>
-    <Header></Header>
-    <Footer></Footer>
-    <todo></todo>
-    <img src="./assets/logo.png">
-    <router-view/>
-    <!-- <div>
-      <span v-if="seen">sss</span>
-    </div>
-    
-     <div id="app-4">
-  
-    <li v-for="todo in todos" :key="todo.id">
-      {{ todo.text }}
-      
-    </li>
-  
-</div>
-<div>
-  <p>{{showmsg}}</p>
-  <button @click="btn_showmsg">翻转1</button>
-</div>
-
-<div>
-  <p>{{bindmsg}}</p>
-  <input v-model="bindmsg">
-</div>
-<div>
-  <input type="text" v-model="newItem" v-on:keyup.enter="addNew">
-  <ul>
-    <li v-for="item in items" v-bind:class="{finished:item.isFinished}" :key="item.id" 
-    v-on:click="toggleFinsh(item)">
-{{item.label}}
-    </li>
-  </ul>
- <component-a msgg="willdonnereee"></component-a>
-</div> -->
-  </div>
-  
-  
 </template>
 
 <script>
-import Stroe from './stroe'
-import componentA from './components/component.vue'
-
-
-import Header from './todo/header.vue'
-import Footer from './todo/foot.vue'
-import Todo from './todo/todo.vue'
-console.log(Stroe)
-export default {
-  
-  name: 'App' ,
-  data(){
-    
-    return{
-    //   seen: true,
-    //   todos: [
-    //     {text: 'vue'},
-    //     {text: 'willdonner'},
-    //     {text: 'willdonner'},
-    //     {text: 'willdonner'},
-    //   ],
-    //   showmsg: "hello vue",
-    //   bindmsg: "this is vue",
-    //   groceryList: [
-    //   { id: 0, text: '蔬菜' },
-    //   { id: 1, text: '奶酪' },
-    //   { id: 2, text: '其他人类食物' }
-    // ],
-    // items: Stroe.fetch(),
-    // newItem: '',
+    // 引入header.vue组件
+    import APP_Header from './todo/header.vue';
+    // 引入footer.jsx组件
+    import APP_Footer from './todo/foot.vue';
+    // 引入todo.vue组件
+    import APP_Todo from './todo/todo.vue';
+    export default {
+        // 声明组件，之后便可以使用组件标签
+        components: {
+            APP_Header,
+            APP_Footer,
+            APP_Todo
+        }
     }
-  
-    
-  },
-  //  components: { componentA },
-  components:{
-    Header,Footer,Todo
-  },
-  watch:{
-    // items:{
-    //   handler:function(items){
-    //     Stroe.save(items)
-    //   },
-    //   deep:true
-    // }
-  },
-  methods:{
-      // btn_showmsg:function(){
-      //   this.showmsg = this.showmsg.split(' ').reverse().join(' ')
-      //         },
-      // toggleFinsh(item){
-      //   item.isFinished = !item.isFinished
-      // },
-      // addNew(){
-      //   this.items.push({
-      //     label: this.newItem,
-      //     isFinished: false
-      //   })
-      //   this.newItem=''
-      // }
-    }
-    
-}
-
-
 </script>
 
-<style scoped>
-.finished{
-  text-decoration: underline
-}
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  list-style: none;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-#cover{
-  position: absolute;
-  left: 0;
-  top:0;
-  right: 0;
-  bottom: 0;
-  background-color: #999;
-  opacity: .8;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-}
-.bg_img{
-  max-width:100%;
-   height:100%;
-   background-size: cover;
-   z-index: -1;
-}
+<!-- 设置scoped 表示当前组件下的id只在当前组件起作用，不会跟其他组件引起冲突 -->
+<style lang="stylus" scoped>
+    #app {
+        position absolute
+        left 0
+        right 0
+        top 0
+        bottom 0
+    }
+    #cover {
+      
+        position absolute
+        left 0
+        right 0
+        top 0
+        bottom 0
+        background-color #555
+        opacity 0.5
+        z-index -1
+    }
 </style>
