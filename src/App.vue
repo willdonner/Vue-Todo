@@ -11,10 +11,13 @@
 <script>
     // 引入header.vue组件
     import APP_Header from './todo/header.vue';
+
     // 引入footer.jsx组件
     import APP_Footer from './todo/foot.vue';
+
     // 引入todo.vue组件
     import APP_Todo from './todo/todo.vue';
+
     export default {
         // 声明组件，之后便可以使用组件标签
         components: {
@@ -34,8 +37,8 @@
         top 0
         bottom 0
     }
+
     #cover {
-      
         position absolute
         left 0
         right 0
@@ -45,4 +48,5 @@
         opacity 0.5
         z-index -1
     }
+
 </style>

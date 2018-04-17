@@ -1,3 +1,5 @@
+import { Script } from "vm";
+
 const STORAGE_KEY ='todo_vuejs'
 export default{
     fetch(){
