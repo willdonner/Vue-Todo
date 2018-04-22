@@ -1,6 +1,6 @@
-# my_vue_projece
+# Vue-Todo
 
-> this is my vue project
+> this is my vue project Vue-Todo
 
 ## Build Setup
 
